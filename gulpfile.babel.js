@@ -103,7 +103,7 @@ gulp.task('dev', ['examples:build', 'examples:watch'], () => {
     stats: {colors: true}
   });
 
-  server.listen(8080, 'localhost', () => {});
+  server.listen(9082, '0.0.0.0', () => {});
 });
 
 // EXAMPLES: WATCH
@@ -268,7 +268,8 @@ gulp.task('src:lint', () => {
 
 // CLEANING
 gulp.task('examples:clean', (callback) => {
-  del(examplesDest).then(() => callback());
+  callback();
+  //del(examplesDest).then(() => callback());
 });
 
 gulp.task('build:clean', (callback) => {
